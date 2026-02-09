@@ -1,0 +1,11 @@
+# re stands for regular expressions in Python.
+import re
+
+text = "<p>Hello, this is <b>NLP</b> practice.</p>"
+
+#This will  Remove HTML tags from the text
+clean_text = re.sub(r'<.*?>', '', text)
+
+# Show results
+print("Original Text:", text)
+print("Text without HTML tags:", clean_text)
