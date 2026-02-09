@@ -1,0 +1,17 @@
+# This is Function to remove punctuation from text
+def remove_punctuation(text):
+    punctuation = "!@#$%^&*()_+-=,.?;:'\"/<>[]{}|`~"
+    result = ""
+    for char in text:
+        if char not in punctuation:
+            result += char
+    return result
+
+text = "Hello, world! This is NLP practice."
+
+# This one is to Clean the text
+clean_text = remove_punctuation(text)
+
+# And one  Show results
+print("Original Text:", text)
+print("Text without punctuation:", clean_text)
