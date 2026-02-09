@@ -1,0 +1,20 @@
+# This is the common required  library's 
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+# Download required NLTK data
+nltk.download('punkt')
+nltk.download('stopwords')
+
+text = "This is an example showing how to remove stopwords from text."
+
+# This one Split text into words
+words = word_tokenize(text)
+
+# TO Remove common stopwords
+filtered_words = [word for word in words if word.lower() not in stopwords.words('english')]
+
+# Show results
+print("Original Text:", text)
+print("Text without Stopwords:", " ".join(filtered_words))
