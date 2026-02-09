@@ -1,0 +1,16 @@
+#This is the code for the Perform lemmatization using spaCy or WordNet
+import spacy
+
+# Load small English model
+nlp = spacy.load("en_core_web_sm")
+
+sentence = "The children are running and studying in the classrooms."
+
+# Process sentence with Spacy
+doc = nlp(sentence)
+
+# Get the base form (lemma) of each word
+lemmatized = [token.lemma_ for token in doc]
+
+# Show the lemmatized words
+print(lemmatized)
