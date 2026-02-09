@@ -1,0 +1,11 @@
+#This is to regex code to remove URLs from text
+import re
+
+text = "Check out this website: https://example.com for more info."
+
+# TO  Remove the  URLs from the text
+clean_text = re.sub(r'http\S+|www\S+', '', text)
+
+#This will  Show's results
+print("Original Text:", text)
+print("Text without URLs:", clean_text)
