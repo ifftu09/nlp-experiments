@@ -1,0 +1,5 @@
+ #This is the code for convert a text string to lowercase.
+    text = "Hello World! This is NLP Practice."
+    lower_text = text.lower()
+    print("Original Text:", text)
+    print("Lowercase Text:", lower_text)
