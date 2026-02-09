@@ -1,0 +1,10 @@
+import emoji
+
+text = "I love Python"
+
+# Convert emojis (if any) to text descriptions
+converted = emoji.demojize(text)
+
+# Show results
+print("Original Text:", text)
+print("Text with emojis converted to words:", converted)
