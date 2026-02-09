@@ -1,0 +1,23 @@
+#This is the code that we have taken from the given dataset 
+
+#common library 
+import pandas as pd
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
+import nltk
+
+nltk.download('punkt')  # Download tokenizer data
+
+# Load tweets from CSV file
+data = pd.read_csv("tweets.csv")  # Replace with your CSV file path
+sentence = data['text'][0]        # Take the first tweet
+
+# Initialize stemmer
+ps = PorterStemmer()
+
+# Stem each word in the tweet
+stemmed = [ps.stem(word) for word in word_tokenize(sentence)]
+
+# Show results
+print("Original Tweet:", sentence)
+print("Stemmed Words:", stemmed)
